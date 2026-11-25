@@ -85,7 +85,7 @@ a { color: inherit; }
   gap: 18px;
   max-width: 720px;
   margin: 0 auto;
-  padding: 16px 14px 30px;
+  padding: 48px 16px 80px;
 }
 .btn-gloss {
   display: inline-block;
@@ -104,6 +104,10 @@ a { color: inherit; }
 .btn-gloss:active { transform: translateY(2px); box-shadow: none; }
 
 /* ---------------- CONTENT ---------------- */
+/* each section = one block, separated by generous vertical space */
+.block + .block { margin-top: 64px; }
+.block > .page-title, .block > .sub-title { margin-top: 0; }
+.block > .sub-title { margin-bottom: 18px; }
 .content {
   min-width: 0;
   outline: none;
@@ -258,9 +262,8 @@ a { color: inherit; }
 .gb-list p { margin: 4px 0 0; word-break: break-word; }
 
 /* link-in-bio buttons */
-.linkbtns.more { margin-top: 26px; }
 
-.linkbtns { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; }
+.linkbtns { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
 .linkbtn {
   display: flex; align-items: center; gap: 10px;
   padding: 9px 14px;
@@ -339,7 +342,9 @@ a { color: inherit; }
 @media (max-width: 680px) {
   body { font-size: 14px; }
 
-  .layout { grid-template-columns: 1fr; gap: 16px; padding: 12px 12px 24px; }
+  .layout { grid-template-columns: 1fr; gap: 16px; padding: 36px 14px 56px; }
+  .block + .block { margin-top: 48px; }
+  .linkbtns { gap: 10px; }
 
   .profile { grid-template-columns: 1fr; }
   .card { max-width: 260px; margin: 0 auto; }
