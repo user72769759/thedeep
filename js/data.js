@@ -14,7 +14,7 @@ window.SITE = {
     title: "QUEST",
     type: "Pre-save",
     year: "Coming soon",
-    cover: "assets/cover-1.svg",
+    cover: "assets/cover-quest.jpg",
     link: "https://open.spotify.com/intl-ko/album/49BDGWBRg6COeKCzZmTNcL?si=02f5b14a60664b77&nd=1&dlsi=e8d5ecc45f8e4152",
   },
 
