@@ -1,7 +1,6 @@
 # the deep ☆ official web world
 
-아티스트 **the deep** 홍보용 Y2K 스타일 반응형 웹사이트.
-핑크 + 민트 + 레몬 옐로, 광택 버튼, 흐르는 뉴스 티커, 반짝이 커서, 88×31 배너 버튼.
+아티스트 **the deep** 홍보용 웹사이트. 2000년대 '창(window)' 틀 — 제목 표시줄, 섹션별 작은 창, 픽셀 폰트(갈무리)·픽셀 아이콘.
 
 ## 구조
 홈 화면 한 장짜리 사이트예요.
@@ -10,11 +9,11 @@ index.html      화면 전체 + 링크 버튼 (id="quick-links")
 css/style.css   디자인 + 반응형 (960px 태블릿, 680px 모바일)
 js/data.js      흐르는 문구, 최신 발매, 뉴스
 js/main.js      위 데이터 표시, 방문 수, 반짝이 효과
-assets/         SVG 그래픽 (커버는 자리표시용 — 실제 이미지로 교체)
+assets/         로고, 커버, 파비콘 / assets/px/ 픽셀 아이콘
 ```
 
 ## 수정 방법
-- **링크 버튼**: `index.html`의 `id="social"`, `id="merch"`, `id="interviews"`, `id="quick-links"`(제목 없는 나머지) 안에서 고치세요.
+- **링크 버튼**: `index.html`의 각 `panel` 안 `<a class="linkbtn">`. 아이콘은 `assets/px/` 중에서 고르세요.
 - **최신 발매 / 뉴스 / 흐르는 문구**: `js/data.js`.
 
 ## 참고
