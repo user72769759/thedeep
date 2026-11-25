@@ -76,7 +76,6 @@ a { color: inherit; }
   padding: 3px 0 3px 100%;
   animation: marquee 28s linear infinite;
 }
-.ticker:hover .ticker-track { animation-play-state: paused; }
 .ticker-track span { margin-right: 48px; }
 
 /* ---------------- LAYOUT ---------------- */

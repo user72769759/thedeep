@@ -3,11 +3,7 @@
    링크 버튼은 index.html의 id="quick-links"에 직접 들어 있어요.
    ========================================================= */
 window.SITE = {
-  ticker: [
-    "☆ QUEST PRE-SAVE NOW ☆",
-    "♫ rollercoaster MV OUT NOW ♫",
-    "♡ TOUR MERCH 판매 중 ♡",
-  ],
+  ticker: Array(8).fill("QUEST Coming Soon!"),
 
   // 홈의 'Newest Release'와 왼쪽 사이드바에 노출
   release: {
