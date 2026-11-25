@@ -16,14 +16,7 @@
       <a class="feature-link" href="${esc(r.link)}"${ext(r.link)}>${esc(r.title)} / ${esc(r.type)} ${esc(r.year)}</a>`;
   }
 
-  /* ---------- news ---------- */
-  $("#news-list").innerHTML = S.news.map((n) => `
-    <li><time>${esc(n.date)}</time>
-      ${n.link ? `<a class="ylink" href="${esc(n.link)}"${ext(n.link)}>${esc(n.text)}</a>` : `<span class="ylink">${esc(n.text)}</span>`}
-      ${n.isNew ? '<span class="new">NEW!</span>' : ""}</li>`).join("");
-
   /* ---------- small things ---------- */
-  $("#year").textContent = new Date().getFullYear();
 
   // sparkle cursor trail (mouse only, motion allowed)
   if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
