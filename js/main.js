@@ -2,10 +2,6 @@
   const S = window.SITE;
   const $ = (sel, root = document) => root.querySelector(sel);
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const store = {
-    get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } },
-    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
-  };
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const ext = (href) => (/^https?:/.test(href) ? ' target="_blank" rel="noopener"' : "");
 
@@ -15,9 +11,6 @@
   /* ---------- newest release ---------- */
   const r = S.release;
   if (r) {
-    $("#promo-title").textContent = `${r.title} (${r.type})`;
-    $(".promo-cover img").src = r.cover;
-    $("#player-track").textContent = `${r.title} — the deep`;
     $("#feature").innerHTML = `
       <a href="${esc(r.link)}"${ext(r.link)}><img src="${esc(r.cover)}" alt="${esc(r.title)} 커버"></a>
       <a class="feature-link" href="${esc(r.link)}"${ext(r.link)}>${esc(r.title)} / ${esc(r.type)} ${esc(r.year)}</a>`;
@@ -29,20 +22,7 @@
       ${n.link ? `<a class="ylink" href="${esc(n.link)}"${ext(n.link)}>${esc(n.text)}</a>` : `<span class="ylink">${esc(n.text)}</span>`}
       ${n.isNew ? '<span class="new">NEW!</span>' : ""}</li>`).join("");
 
-  /* ---------- visit counter (this browser) ---------- */
-  const visits = store.get("thedeep:visits", 0) + 1;
-  store.set("thedeep:visits", visits);
-  $("#visit-count").textContent = String(visits).padStart(6, "0");
-
-  /* ---------- newsletter (placeholder) ---------- */
-  $("#club-form").addEventListener("submit", (e) => {
-    e.preventDefault();
-    $("#club-msg").textContent = "♡ 뉴스레터는 곧 열려요!";
-    e.target.reset();
-  });
-
   /* ---------- small things ---------- */
-  $("#mood").textContent = S.moods[new Date().getDate() % S.moods.length];
   $("#year").textContent = new Date().getFullYear();
 
   // sparkle cursor trail (mouse only, motion allowed)
