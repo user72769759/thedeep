@@ -14,6 +14,7 @@
   --yellow: #fff56a;
   --white: #fff;
   --ink: #b0367a;
+  --hot: #fe0096;
   --font: Verdana, Tahoma, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   --display: "Fredoka", "Jua", "Arial Rounded MT Bold", sans-serif;
   --radius: 6px;
@@ -26,15 +27,8 @@ body {
   font-family: var(--font);
   font-size: 13px;
   line-height: 1.6;
-  color: var(--white);
-  background-color: var(--pink);
-  /* subtle dotted Y2K wallpaper */
-  background-image:
-    radial-gradient(rgba(255,255,255,.35) 1px, transparent 1.5px),
-    radial-gradient(rgba(255,255,255,.2) 1px, transparent 1.5px);
-  background-size: 22px 22px, 22px 22px;
-  background-position: 0 0, 11px 11px;
-  text-shadow: 1px 1px 0 rgba(176, 54, 122, .45);
+  color: var(--ink);
+  background: var(--white);
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
@@ -52,9 +46,8 @@ a { color: inherit; }
   align-items: center;
   gap: 12px;
   padding: 14px 16px 10px;
-  background:
-    linear-gradient(180deg, var(--pink-2), var(--pink) 85%);
-  border-bottom: 3px solid var(--white);
+  background: var(--white);
+  border-bottom: 3px solid var(--hot);
   overflow: hidden;
 }
 .logo {
@@ -66,18 +59,8 @@ a { color: inherit; }
   letter-spacing: 1px;
   text-align: center;
 }
-.logo a {
-  text-decoration: none;
-  color: var(--mint);
-  -webkit-text-stroke: 3px var(--white);
-  paint-order: stroke fill;
-  text-shadow:
-    3px 3px 0 var(--mint-dark),
-    5px 5px 0 rgba(176, 54, 122, .35);
-  background: none;
-  display: inline-block;
-  animation: bob 3.2s ease-in-out infinite;
-}
+.logo a { display: inline-block; animation: bob 3.2s ease-in-out infinite; }
+.logo img { width: clamp(96px, 16vw, 150px); height: auto; margin: 0 auto; }
 .deco { display: flex; align-items: center; gap: 10px; }
 .deco-left { justify-content: flex-end; }
 .deco-right { justify-content: flex-start; }
@@ -88,8 +71,8 @@ a { color: inherit; }
 .ticker {
   overflow: hidden;
   background: var(--pink-3);
-  border-bottom: 1px dashed var(--white);
-  color: var(--pink-deep);
+  border-bottom: 1px dashed var(--hot);
+  color: var(--hot);
   text-shadow: none;
   font-size: 11px;
   font-weight: bold;
@@ -153,14 +136,14 @@ a { color: inherit; }
 .btn-gloss:active { transform: translateY(2px); box-shadow: none; }
 
 .player {
-  background: rgba(255,255,255,.25);
-  border: 2px dotted var(--white);
+  background: #fff4fa;
+  border: 2px dotted var(--hot);
   border-radius: var(--radius);
   padding: 8px 10px;
   font-size: 11px;
 }
 .player-head { margin: 0 0 4px; font-weight: bold; }
-.player-track { margin: 4px 0 0; color: var(--yellow); font-weight: bold; }
+.player-track { margin: 4px 0 0; color: var(--hot); font-weight: bold; }
 .eq { display: flex; gap: 3px; height: 22px; align-items: flex-end; }
 .eq i { flex: 1; background: linear-gradient(0deg, var(--mint-2), var(--yellow)); animation: eq 0.9s ease-in-out infinite alternate; }
 .eq i:nth-child(2) { animation-delay: .2s; } .eq i:nth-child(3) { animation-delay: .45s; }
@@ -184,7 +167,7 @@ a { color: inherit; }
 .club form { display: flex; gap: 4px; }
 .club input { flex: 1; min-width: 0; font: 11px var(--font); padding: 3px 5px; border: 1px solid var(--white); border-radius: 2px; color: var(--ink); }
 .club button { font: bold 10px var(--font); padding: 3px 6px; cursor: pointer; color: var(--white); background: var(--pink-deep); border: 1px solid var(--white); border-radius: 2px; }
-.club-msg { margin: 4px 0 0; color: var(--yellow); min-height: 1em; }
+.club-msg { margin: 4px 0 0; color: var(--ink); min-height: 1em; }
 .mood-text { margin: 0; font-size: 28px; text-align: center; }
 .tiny { font-size: 10px; margin: 0; }
 
@@ -200,23 +183,22 @@ a { color: inherit; }
   margin: 0 0 10px;
   font-size: 15px;
   font-weight: bold;
-  color: var(--white);
+  color: var(--hot);
 }
 .sub-title {
   margin: 26px 0 10px;
   text-align: center;
   font-size: 13px;
-  color: var(--yellow);
-  text-shadow: 1px 1px 0 #c23d86, -1px 0 0 #c23d86, 0 -1px 0 #c23d86, 1px 0 0 #c23d86;
+  color: var(--hot);
+  letter-spacing: 1px;
 }
 .lead { margin: 0 0 10px; font-size: 14px; font-weight: bold; }
 .lead.small { font-size: 12px; font-weight: normal; }
 
 .ylink, .feature-link {
-  color: var(--yellow);
+  color: var(--hot);
   font-weight: bold;
   text-decoration: none;
-  text-shadow: 1px 1px 0 #c23d86, -1px 0 0 #c23d86, 0 -1px 0 #c23d86, 1px 0 0 #c23d86;
 }
 .ylink:hover, .feature-link:hover { text-decoration: underline wavy var(--mint); }
 
@@ -231,18 +213,18 @@ a { color: inherit; }
 }
 .feature a:hover img { transform: rotate(2deg) scale(1.04); }
 .feature-link { font-size: 15px; }
-.feature-link::before { content: "✪ "; color: var(--white); }
+.feature-link::before { content: "✪ "; }
 
 .news { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
 .news li {
   display: flex; gap: 10px; align-items: baseline;
-  background: rgba(255,255,255,.18);
-  border: 1px solid rgba(255,255,255,.6);
+  background: #fff4fa;
+  border: 1px solid var(--pink-2);
   border-radius: 3px;
   padding: 6px 10px;
 }
 .news time { flex: none; font-family: "Courier New", monospace; font-size: 11px; color: var(--ink); text-shadow: none; background: var(--pink-3); padding: 0 4px; border-radius: 2px; }
-.news .new { color: var(--yellow); text-shadow: 1px 1px 0 #c23d86; font-size: 10px; animation: blink 1s steps(2) infinite; }
+.news .new { color: var(--hot); font-size: 10px; animation: blink 1s steps(2) infinite; }
 
 /* grids */
 .grid { display: grid; gap: 14px; }
@@ -390,8 +372,8 @@ a { color: inherit; }
 /* footer */
 .site-footer {
   text-align: center; font-size: 11px; padding: 14px 10px 24px;
-  border-top: 3px solid var(--white);
-  background: linear-gradient(0deg, var(--pink-2), var(--pink));
+  border-top: 3px solid var(--hot);
+  background: var(--white);
 }
 .site-footer p { margin: 2px 0; }
 .inline-star { display: inline-block; width: 14px; height: 14px; vertical-align: -2px; animation: spin 4s linear infinite; }
@@ -444,7 +426,6 @@ a { color: inherit; }
   .deco img { width: 26px; height: 26px; }
   .deco img.spin { width: 32px; height: 32px; }
   .deco img:not(.spin) { display: none; }
-  .logo a { -webkit-text-stroke-width: 2px; text-shadow: 2px 2px 0 var(--mint-dark); }
 
   .layout { grid-template-columns: 1fr; gap: 16px; padding: 12px 12px 24px; }
   .content { order: 1; }
