@@ -13,7 +13,8 @@ assets/         SVG 그래픽 (커버·사진은 자리표시용 — 실제 이�
 ```
 
 ## 수정 방법
-- **앨범/뉴스/공연/링크**: `js/data.js`의 값을 바꾸세요. `releases`의 첫 항목이 "최신 발매"로 노출됩니다.
+- **링크 버튼**: `index.html`의 `id="quick-links"`(Home)와 `id="all-links"`(Links) 두 곳을 같이 고치세요. JS 없이도 동작하도록 HTML에 직접 넣어뒀어요.
+- **앨범/뉴스/공연**: `js/data.js`의 값을 바꾸세요. `releases`의 첫 항목이 "최신 발매"로 노출됩니다.
 - **뮤직비디오**: `videos`의 `youtubeId`에 유튜브 영상 ID를 넣으면 임베드됩니다.
 - **사진**: `assets/`에 jpg/png를 넣고 `gallery`, `releases[].cover` 경로를 바꾸세요.
 - **프로필 문구**: `index.html`의 `<!-- EDIT -->` 부분.
@@ -21,7 +22,7 @@ assets/         SVG 그래픽 (커버·사진은 자리표시용 — 실제 이�
 ## 참고
 - 방명록과 방문 수는 지금은 **각 방문자의 브라우저에만** 저장됩니다. 모두가 함께 보는 방명록은 Supabase 연결이 필요해요.
 - 뉴스레터 폼은 아직 자리표시입니다.
-- 빌드 과정이 없는 정적 사이트라 Cloudflare Pages에 저장소를 연결하면 그대로 배포됩니다 (build command 없음, output directory `/`).
+- Cloudflare Workers 배포 설정은 `wrangler.jsonc`(정적 파일 전체 배포), 제외 목록은 `.assetsignore`에 있어요. 빌드 명령 없이 `npx wrangler deploy`로 배포됩니다.
 - `prefers-reduced-motion` 설정 시 애니메이션이 꺼집니다.
 
 ## 로컬 미리보기

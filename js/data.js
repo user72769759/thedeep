@@ -11,7 +11,8 @@ window.SITE = {
     "✿ 방명록에 한마디 남겨주세요 ✿",
   ],
 
-  // ★ 메인 링크 버튼 (Home의 Quick Links + Links 페이지)
+  // (참고용) 링크 버튼은 index.html에 직접 들어 있어요. 버튼을 바꾸려면 index.html의
+  // id="quick-links", id="all-links" 두 곳을 같이 고쳐주세요.
   links: [
     { label: "QUEST PRE SAVE", icon: "💿", href: "https://open.spotify.com/intl-ko/album/49BDGWBRg6COeKCzZmTNcL?si=02f5b14a60664b77&nd=1&dlsi=e8d5ecc45f8e4152", hot: true },
     { label: "rollercoaster MV", icon: "🎢", href: "https://www.youtube.com/watch?si=1QNYl4Ic7zeMxyI0&v=15ejN62aGrI&feature=youtu.be", hot: true },

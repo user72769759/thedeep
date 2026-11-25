@@ -23,15 +23,7 @@
       <a class="feature-link" href="#music" data-tab="music" data-album="0">${esc(latest.title)} / ${esc(latest.type)} ${esc(latest.year)}</a>`;
   }
 
-  /* ---------- link buttons ---------- */
-  const linkHtml = (list) => list.map((l) => `
-    <a class="linkbtn${l.hot ? " hot" : ""}" href="${esc(l.href)}" target="_blank" rel="noopener">
-      <span class="lb-icon" aria-hidden="true">${esc(l.icon || "☆")}</span><span>${esc(l.label)}</span><span class="lb-arrow" aria-hidden="true">▶</span>
-    </a>`).join("");
-  $("#quick-links").innerHTML = linkHtml(S.links);
-  $("#all-links").innerHTML = linkHtml(S.links);
-  const preSave = S.links.find((l) => /pre ?save/i.test(l.label));
-  if (preSave) $("#promo-btn").href = preSave.href;
+  /* link buttons, badges, pre-save button are static HTML in index.html */
 
   /* ---------- news ---------- */
   $("#news-list").innerHTML = S.news.map((n) => `
@@ -94,10 +86,6 @@
   lb.addEventListener("click", (e) => { if (e.target === lb || e.target.closest(".lb-close")) closeLb(); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !lb.hidden) closeLb(); });
 
-  /* ---------- badges ---------- */
-  $("#badges").innerHTML = S.badges.map((b) => `
-    <a class="badge88" href="${esc(b.href)}" target="_blank" rel="noopener" style="background:${esc(b.bg)};color:${esc(b.color)}">${esc(b.label)}</a>`).join("");
-
   /* ---------- tabs / routing ---------- */
   const pages = $$(".page").map((p) => p.dataset.page);
   const nav = $(".tabs");
@@ -121,6 +109,7 @@
   });
   window.addEventListener("popstate", () => go(location.hash.slice(1)));
   go(location.hash.slice(1));
+  window.scrollTo(0, 0);
 
   $(".menu-toggle").addEventListener("click", (e) => {
     const open = nav.classList.toggle("open");
