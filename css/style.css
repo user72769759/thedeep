@@ -259,15 +259,7 @@ a { color: inherit; }
 .gb-list p { margin: 4px 0 0; word-break: break-word; }
 
 /* link-in-bio buttons */
-.group-title {
-  margin: 22px 0 8px;
-  font-size: 12px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--hot);
-  display: flex; align-items: center; gap: 8px;
-}
-.group-title::after { content: ""; flex: 1; border-top: 2px solid var(--pink-2); }
+.linkbtns.more { margin-top: 26px; }
 
 .linkbtns { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; }
 .linkbtn {
