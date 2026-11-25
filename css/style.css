@@ -84,41 +84,6 @@ a { color: inherit; }
 .deco img { width: 44px; height: 44px; filter: drop-shadow(2px 2px 0 rgba(176,54,122,.35)); }
 .deco img.spin { width: 58px; height: 58px; }
 
-/* ---------------- NAV TABS ---------------- */
-.tabs {
-  background: linear-gradient(180deg, #b9f6f9 0%, var(--mint-2) 50%, #46c1cc 51%, var(--mint) 100%);
-  border-bottom: 2px solid var(--white);
-  box-shadow: 0 2px 0 rgba(31, 154, 166, .4);
-}
-.tabs ul {
-  list-style: none; margin: 0 auto; padding: 4px 8px;
-  display: flex; flex-wrap: wrap; gap: 4px; justify-content: center;
-  max-width: 1100px;
-}
-.tabs a {
-  display: block;
-  min-width: 92px;
-  padding: 3px 12px;
-  text-align: center;
-  font-size: 11px;
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--white);
-  text-shadow: 1px 1px 0 var(--mint-dark);
-  background: linear-gradient(180deg, #d6fbfd, #6fd8e0 50%, #3fb9c4 51%, #7fe3ea);
-  border: 1px solid var(--white);
-  border-radius: 2px;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 1px 1px 0 rgba(31,154,166,.6);
-  transition: transform .1s;
-}
-.tabs a:hover, .tabs a:focus-visible { background: linear-gradient(180deg, #fff, var(--pink-2) 50%, var(--pink) 51%, var(--pink-2)); text-shadow: 1px 1px 0 var(--pink-deep); }
-.tabs a[aria-current="page"] {
-  background: linear-gradient(180deg, #fffbd0, var(--yellow) 50%, #ffd84a 51%, #fff49a);
-  color: var(--ink); text-shadow: none;
-}
-.tabs a:active { transform: translateY(1px); }
-.menu-toggle { display: none; }
-
 /* ---------------- TICKER ---------------- */
 .ticker {
   overflow: hidden;
@@ -480,16 +445,6 @@ a { color: inherit; }
   .deco img.spin { width: 32px; height: 32px; }
   .deco img:not(.spin) { display: none; }
   .logo a { -webkit-text-stroke-width: 2px; text-shadow: 2px 2px 0 var(--mint-dark); }
-
-  .menu-toggle {
-    display: block; width: 100%;
-    font: bold 13px var(--font); color: #fff; letter-spacing: 1px;
-    text-shadow: 1px 1px 0 var(--mint-dark);
-    background: none; border: 0; padding: 8px; cursor: pointer;
-  }
-  .tabs ul { display: none; grid-template-columns: repeat(2, 1fr); padding: 0 8px 8px; gap: 6px; }
-  .tabs.open ul { display: grid; }
-  .tabs a { min-width: 0; padding: 8px; font-size: 13px; }
 
   .layout { grid-template-columns: 1fr; gap: 16px; padding: 12px 12px 24px; }
   .content { order: 1; }

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>the deep ☆ official web world</title>
-  <meta name="description" content="아티스트 the deep 공식 홈페이지 — 음악, 영상, 공연 일정, 갤러리, 방명록.">
+  <meta name="description" content="아티스트 the deep 공식 홈페이지 — 음악, 영상, 인터뷰, 머치 링크.">
   <meta property="og:title" content="the deep ☆ official web world">
   <meta property="og:description" content="아티스트 the deep 공식 홈페이지">
   <meta name="theme-color" content="#ff9ccf">
@@ -24,7 +24,7 @@
       <img src="assets/cd.svg" alt="" class="spin">
       <img src="assets/heart.svg" alt="" class="float f2">
     </div>
-    <h1 class="logo"><a href="#home" data-tab="home">the deep</a></h1>
+    <h1 class="logo"><a href="./">the deep</a></h1>
     <div class="deco deco-right" aria-hidden="true">
       <img src="assets/heart.svg" alt="" class="float f2">
       <img src="assets/cd.svg" alt="" class="spin">
@@ -32,20 +32,6 @@
     </div>
   </header>
 
-  <!-- ============ NAV ============ -->
-  <nav class="tabs" aria-label="메인 메뉴">
-    <button class="menu-toggle" aria-expanded="false" aria-controls="tablist">☰ MENU</button>
-    <ul id="tablist">
-      <li><a href="#home" data-tab="home">Home</a></li>
-      <li><a href="#music" data-tab="music">Music</a></li>
-      <li><a href="#video" data-tab="video">Video</a></li>
-      <li><a href="#shows" data-tab="shows">Shows</a></li>
-      <li><a href="#gallery" data-tab="gallery">Gallery</a></li>
-      <li><a href="#profile" data-tab="profile">Profile</a></li>
-      <li><a href="#guestbook" data-tab="guestbook">Guestbook</a></li>
-      <li><a href="#links" data-tab="links">Links</a></li>
-    </ul>
-  </nav>
 
   <div class="ticker" aria-label="새 소식">
     <div class="ticker-track" id="ticker"></div>
@@ -60,7 +46,7 @@
 
       <div class="promo">
         <p class="promo-label">✧ COMING SOON ✧</p>
-        <a href="#music" data-tab="music" class="promo-cover">
+        <a href="https://open.spotify.com/intl-ko/album/49BDGWBRg6COeKCzZmTNcL?si=02f5b14a60664b77&amp;nd=1&amp;dlsi=e8d5ecc45f8e4152" target="_blank" rel="noopener" class="promo-cover">
           <img src="assets/cover-1.svg" alt="최신 싱글 커버">
         </a>
         <p class="promo-title" id="promo-title">—</p>
@@ -78,7 +64,7 @@
     <main id="main" class="content" tabindex="-1">
 
       <!-- HOME -->
-      <section class="page" id="home" data-page="home">
+      <section class="page" id="home">
         <h2 class="page-title">the deep ☆ Official Web World</h2>
         <p class="lead">
           깊은 곳에서 올라오는 소리, <strong>the deep</strong>의 공식 홈페이지에 오신 걸 환영해요!
@@ -108,119 +94,6 @@
         <ul class="news" id="news-list"></ul>
       </section>
 
-      <!-- MUSIC -->
-      <section class="page" id="music" data-page="music">
-        <h2 class="page-title">Music ☆ Discography</h2>
-        <p class="lead">커버를 누르면 수록곡을 볼 수 있어요.</p>
-        <div class="grid albums" id="albums"></div>
-        <div class="tracklist" id="tracklist" hidden></div>
-      </section>
-
-      <!-- VIDEO -->
-      <section class="page" id="video" data-page="video">
-        <h2 class="page-title">Video ☆ MV &amp; Live</h2>
-        <div class="grid videos" id="videos"></div>
-      </section>
-
-      <!-- SHOWS -->
-      <section class="page" id="shows" data-page="shows">
-        <h2 class="page-title">Shows ☆ Schedule</h2>
-        <div class="table-wrap">
-          <table class="shows">
-            <thead><tr><th>Date</th><th>Venue</th><th>City</th><th>Ticket</th></tr></thead>
-            <tbody id="shows-body"></tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- GALLERY -->
-      <section class="page" id="gallery" data-page="gallery">
-        <h2 class="page-title">Gallery ☆ Photos</h2>
-        <p class="lead">사진을 누르면 크게 볼 수 있어요.</p>
-        <div class="grid gallery" id="gallery"></div>
-      </section>
-
-      <!-- PROFILE -->
-      <section class="page" id="profile" data-page="profile">
-        <h2 class="page-title">Profile ☆ About the deep</h2>
-        <div class="profile">
-          <div class="card">
-            <div class="card-photo"><img src="assets/artist.svg" alt="the deep 프로필 사진 자리"></div>
-            <p class="card-name">the deep</p>
-            <dl class="card-stats">
-              <dt>Genre</dt><dd>Dream pop / Electronic</dd>
-              <dt>Debut</dt><dd>20XX</dd>
-              <dt>From</dt><dd>Seoul, KR</dd>
-              <dt>Fave</dt><dd>바다, 새벽, CD 플레이어</dd>
-            </dl>
-          </div>
-          <div class="bio">
-            <p>
-              <strong>the deep</strong>은 깊은 바닷속처럼 겹겹이 쌓인 소리를 만드는 아티스트예요.
-              흐릿한 신스와 맑은 보컬, 오래된 CD 플레이어에서 흘러나올 것 같은 질감을 좋아해요.
-            </p>
-            <p>
-              <!-- EDIT: 아티스트 소개를 여기에 적어주세요 -->
-              여기에 아티스트의 이야기, 작업 방식, 영향을 받은 것들을 적어주세요.
-              짧고 솔직할수록 좋아요.
-            </p>
-            <h3 class="sub-title">Q &amp; A</h3>
-            <ul class="qa">
-              <li><b>Q.</b> 이름이 왜 the deep인가요?<br><span>A. 수면 아래, 아무도 안 보는 곳에서 제일 좋은 게 자란다고 믿어서요.</span></li>
-              <li><b>Q.</b> 요즘 듣는 음악은?<br><span>A. (여기에 답을 적어주세요)</span></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- GUESTBOOK -->
-      <section class="page" id="guestbook" data-page="guestbook">
-        <h2 class="page-title">Guestbook ☆ 방명록</h2>
-        <form class="gb-form" id="gb-form">
-          <label>이름 <input name="name" maxlength="20" required placeholder="닉네임"></label>
-          <label>메시지 <textarea name="msg" maxlength="200" rows="3" required placeholder="the deep에게 한마디!"></textarea></label>
-          <div class="gb-icons" role="radiogroup" aria-label="아이콘">
-            <label><input type="radio" name="icon" value="☆" checked> ☆</label>
-            <label><input type="radio" name="icon" value="♡"> ♡</label>
-            <label><input type="radio" name="icon" value="♫"> ♫</label>
-            <label><input type="radio" name="icon" value="✿"> ✿</label>
-          </div>
-          <button class="btn-gloss" type="submit">SIGN ♡</button>
-          <p class="note">* 지금은 이 브라우저에만 저장돼요. (서버 연결 전 임시 방명록)</p>
-        </form>
-        <ul class="gb-list" id="gb-list"></ul>
-      </section>
-
-      <!-- LINKS -->
-      <section class="page" id="links" data-page="links">
-        <h2 class="page-title">Links ☆ Follow the deep</h2>
-        <p class="lead">클릭해서 놀러오세요!</p>
-        <div class="linkbtns" id="all-links">
-          <a class="linkbtn hot" href="https://open.spotify.com/intl-ko/album/49BDGWBRg6COeKCzZmTNcL?si=02f5b14a60664b77&amp;nd=1&amp;dlsi=e8d5ecc45f8e4152" target="_blank" rel="noopener"><span class="lb-icon" aria-hidden="true">💿</span><span>QUEST PRE SAVE</span><span class="lb-arrow" aria-hidden="true">▶</span></a>
-          <a class="linkbtn hot" href="https://www.youtube.com/watch?si=1QNYl4Ic7zeMxyI0&amp;v=15ejN62aGrI&amp;feature=youtu.be" target="_blank" rel="noopener"><span class="lb-icon" aria-hidden="true">🎢</span><span>rollercoaster MV</span><span class="lb-arrow" aria-hidden="true">▶</span></a>
-          <a class="linkbtn" href="https://merchjungle.com/collections/the-deep?utm_source=ig&amp;utm_medium=social&amp;utm_content=link_in_bio&amp;fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafuC0o-3X09tgsPhC98BJR-7VUA3eqEFfqxfkGF_B6eQaXzFRyasAyZP3REJw_aem_c27AeGCh2oo0fhmBnSmLlA" target="_blank" rel="noopener"><span class="lb-icon" aria-hidden="true">👕</span><span>TOUR MERCH</span><span class="lb-arrow" aria-hidden="true">▶</span></a>
-          <a class="linkbtn" href="https://marpple.shop/kr/the_deeep/products?cate_root_id=1" target="_blank" rel="noopener"><span class="lb-icon" aria-hidden="true">🧸</span><span>MESSY ROOM MERCH</span><span class="lb-arrow" aria-hidden="true">▶</span></a>
-          <a class="linkbtn" href="https://www.dazeddigital.com/music/article/69150/1/the-deep-k-pop-antihero-south-korea-kpop-bitch-interview" target="_blank" rel="noopener"><span class="lb-icon" aria-hidden="true">📰</span><span>INTERVIEW · DAZED</span><span class="lb-arrow" aria-hidden="true">▶</span></a>
-          <a class="linkbtn" href="https://visla.kr/interview/332963/?utm_source=ig&amp;utm_medium=social&amp;utm_content=link_in_bio&amp;fbclid=PAb21jcAOsrfxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAadeVyBAgtFRkM4J2qv_-nTmjVI7muwWroOg3vBOX_kTxJXhl1hp8cpR3qqasA_aem_FY31fNyXfbmh2-V8Xzwn0g" target="_blank" rel="noopener"><span class="lb-icon" aria-hidden="true">🗞️</span><span>INTERVIEW · VISLA</span><span class="lb-arrow" aria-hidden="true">▶</span></a>
-          <a class="linkbtn" href="https://www.youtube.com/watch?v=GkZdX8l9ABg&amp;t=124s" target="_blank" rel="noopener"><span class="lb-icon" aria-hidden="true">🎙️</span><span>WOOKIPOP INTERVIEW</span><span class="lb-arrow" aria-hidden="true">▶</span></a>
-          <a class="linkbtn" href="https://www.youtube.com/@deep_and_deepies/videos" target="_blank" rel="noopener"><span class="lb-icon" aria-hidden="true">📹</span><span>VLOG</span><span class="lb-arrow" aria-hidden="true">▶</span></a>
-          <a class="linkbtn" href="https://www.youtube.com/@TheDeep" target="_blank" rel="noopener"><span class="lb-icon" aria-hidden="true">▶</span><span>YOUTUBE</span><span class="lb-arrow" aria-hidden="true">▶</span></a>
-          <a class="linkbtn" href="https://www.instagram.com/thedeeeep/" target="_blank" rel="noopener"><span class="lb-icon" aria-hidden="true">📷</span><span>INSTAGRAM</span><span class="lb-arrow" aria-hidden="true">▶</span></a>
-          <a class="linkbtn" href="https://www.tiktok.com/@thedeeeep" target="_blank" rel="noopener"><span class="lb-icon" aria-hidden="true">♪</span><span>TIKTOK</span><span class="lb-arrow" aria-hidden="true">▶</span></a>
-        </div>
-        <h3 class="sub-title">88×31 Buttons</h3>
-        <div class="badges" id="badges">
-          <a class="badge88" href="https://www.youtube.com/@TheDeep" target="_blank" rel="noopener" style="background:#ff4d6d;color:#fff">YOUTUBE</a>
-          <a class="badge88" href="https://www.instagram.com/thedeeeep/" target="_blank" rel="noopener" style="background:linear-gradient(90deg,#ff7ac6,#ffb86b);color:#fff">INSTAGRAM</a>
-          <a class="badge88" href="https://www.tiktok.com/@thedeeeep" target="_blank" rel="noopener" style="background:#1b1b1b;color:#8eeaf0">TIKTOK</a>
-          <a class="badge88" href="https://www.youtube.com/@deep_and_deepies/videos" target="_blank" rel="noopener" style="background:#6fd8e0;color:#0b4c52">VLOG</a>
-        </div>
-        <h3 class="sub-title">Contact</h3>
-        <p class="lead">섭외 · 문의 : <a class="ylink" href="mailto:hello@thedeep.example">hello@thedeep.example</a></p>
-        <h3 class="sub-title">Link to us!</h3>
-        <p class="lead small">아래 배너를 퍼가서 홈페이지에 달아주세요 ♡</p>
-        <img src="assets/badge-thedeep.svg" alt="the deep 링크 배너" class="badge-img">
-      </section>
     </main>
 
     <!-- RIGHT SIDEBAR -->
@@ -249,12 +122,6 @@
     <p class="tiny">This page is under construction forever <img src="assets/star.svg" alt="" class="inline-star"></p>
   </footer>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="사진 크게 보기">
-    <button class="lb-close" aria-label="닫기">✕</button>
-    <img id="lb-img" alt="">
-    <p id="lb-cap"></p>
-  </div>
 
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
