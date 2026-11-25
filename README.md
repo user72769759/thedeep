@@ -14,7 +14,7 @@ assets/         SVG 그래픽 (커버는 자리표시용 — 실제 이미지로
 ```
 
 ## 수정 방법
-- **링크 버튼**: `index.html`의 `id="quick-links"` 안에서 고치세요.
+- **링크 버튼**: `index.html`의 `id="quick-links"`(기본), `id="interviews"`, `id="social"` 안에서 고치세요.
 - **최신 발매 / 뉴스 / 흐르는 문구**: `js/data.js`.
 
 ## 참고
