@@ -23,6 +23,16 @@
       <a class="feature-link" href="#music" data-tab="music" data-album="0">${esc(latest.title)} / ${esc(latest.type)} ${esc(latest.year)}</a>`;
   }
 
+  /* ---------- link buttons ---------- */
+  const linkHtml = (list) => list.map((l) => `
+    <a class="linkbtn${l.hot ? " hot" : ""}" href="${esc(l.href)}" target="_blank" rel="noopener">
+      <span class="lb-icon" aria-hidden="true">${esc(l.icon || "☆")}</span><span>${esc(l.label)}</span><span class="lb-arrow" aria-hidden="true">▶</span>
+    </a>`).join("");
+  $("#quick-links").innerHTML = linkHtml(S.links);
+  $("#all-links").innerHTML = linkHtml(S.links);
+  const preSave = S.links.find((l) => /pre ?save/i.test(l.label));
+  if (preSave) $("#promo-btn").href = preSave.href;
+
   /* ---------- news ---------- */
   $("#news-list").innerHTML = S.news.map((n) => `
     <li><time>${esc(n.date)}</time>
@@ -57,7 +67,7 @@
   $("#videos").innerHTML = S.videos.map((v) => `
     <div class="video">
       <div class="video-frame">${v.youtubeId
-        ? `<iframe src="https://www.youtube-nocookie.com/embed/${esc(v.youtubeId)}" title="${esc(v.title)}" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>`
+        ? `<iframe src="https://www.youtube-nocookie.com/embed/${esc(v.youtubeId)}${v.start ? `?start=${+v.start}` : ""}" title="${esc(v.title)}" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>`
         : '<span class="play">▶</span>'}</div>
       <p>${esc(v.title)}</p>
     </div>`).join("");
