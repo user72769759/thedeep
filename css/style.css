@@ -321,14 +321,6 @@ a { color: inherit; }
 .lightbox p { margin: 0; font-weight: bold; color: var(--yellow); }
 .lb-close { position: absolute; top: 12px; right: 14px; font: bold 18px var(--font); width: 38px; height: 38px; border-radius: 50%; border: 2px solid #fff; background: var(--mint-2); color: #fff; cursor: pointer; }
 
-/* sparkle cursor trail */
-.sparkle {
-  position: fixed; pointer-events: none; z-index: 60;
-  font-size: 14px; color: var(--white);
-  text-shadow: 0 0 4px var(--yellow);
-  animation: sparkle .8s ease-out forwards;
-}
-
 /* ---------------- ANIMATIONS ---------------- */
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-100%); } }
 @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
@@ -337,7 +329,6 @@ a { color: inherit; }
 @keyframes eq { from { height: 15%; } to { height: 100%; } }
 @keyframes blink { 50% { opacity: 0; } }
 @keyframes pop { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-@keyframes sparkle { to { opacity: 0; transform: translateY(18px) scale(.3) rotate(90deg); } }
 .spin { animation: spin 6s linear infinite; }
 .float { animation: floaty 3s ease-in-out infinite; }
 .f2 { animation-delay: -1.5s; }
